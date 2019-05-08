@@ -43,7 +43,7 @@ function listenToOtherPlayers() {
 
     fbRef.child( "Players" ).on( "child_removed", function( playerData ) {
         if ( playerData.val() ) {
-
+            fbRef.child( "Players" ).child( playerData.key())
         }
     });
 }

@@ -22,7 +22,9 @@ var Player = function ( playerID ) {
     this.setOrientation = function( position, rotation ) {
         if ( scope.mesh ) {
             scope.mesh.position.copy ( position );
-            scope.mesh.position.copy ( rotation );
+            scope.mesh.rotation.x = rotation.x;
+            scope.mesh.rotation.y = rotation.y;
+            scope.mesh.rotation.z = rotation.z;
         }
     };
 };
