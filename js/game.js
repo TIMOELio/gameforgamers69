@@ -7,7 +7,9 @@ var player;
 
 function loadGame() {
     // load the enviroment
-    loadEnvironment();
+    loadEnvironment1();
+    loadEnvironment2();
+    loadEnvironment3();
     // load the player
     initMainPlayer();
 
@@ -64,10 +66,41 @@ function initMainPlayer() {
     player.init();
 }
 
-function loadEnvironment() {
+// spawn sphere
+function loadEnvironment2() {
     var sphere_geometry = new THREE.SphereGeometry( 1 );
     var sphere_material = new THREE.MeshNormalMaterial();
     var sphere = new THREE.Mesh( sphere_geometry, sphere_material );
 
     scene.add( sphere );
 }
+
+// giant sphere
+function loadEnvironment1() {
+    var sphere_geometry = new THREE.SphereGeometry( 5 );
+    var sphere_material = new THREE.MeshNormalMaterial();
+    var sphere = new THREE.Mesh( sphere_geometry, sphere_material );
+
+    sphere.position.x = 2;
+    sphere.position.y = 4;
+    sphere.position.z = 100;
+
+    scene.add( sphere );
+}
+
+// red wall
+function loadEnvironment3() {
+    var geometry = new THREE.BoxGeometry(10,5,1);
+    var material = new THREE.MeshBasicMaterial({color: 0xff0000});
+    var cube = new THREE.Mesh(geometry, material);
+
+    //cube.add( new THREEFIELD.Collider( cube ) );
+    //gyroscope
+
+    cube.position.x = 30;
+    cube.position.y = 2;
+    cube.position.z = 30;
+
+    scene.add( cube );
+}
+
