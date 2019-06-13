@@ -11,6 +11,7 @@ function loadGame() {
     loadEnvironment2();
     loadEnvironment3();
     loadEnvironment4();
+    loadEnvironment5();
     // load the player
     initMainPlayer();
 
