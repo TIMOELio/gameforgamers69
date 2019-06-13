@@ -124,17 +124,18 @@ function loadEnvironment4() {
 }
 
 // ball texture
-function loadEnviroment5() {
+function loadEnvironment5() {
+
     
+
     var geometry   = new THREE.SphereGeometry(0.5, 32, 32)
     var material  = new THREE.MeshPhongMaterial()
+    material.map    = THREE.ImageUtils.loadTexture('face.png')
     var earthMesh = new THREE.Mesh(geometry, material)
 
     earthMesh.position.x = -30;
     earthMesh.position.y = 2;
     earthMesh.position.z = 0;
 
-    material.map    = THREE.ImageUtils.loadTexture('face.png')
-
-    scene.add(earthMesh)
+    scene.add( earthMesh )
 }
