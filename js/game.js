@@ -107,11 +107,13 @@ function loadEnvironment3() {
 
 // bleron ball
 function loadEnvironment4() {
-    var texture = new THREE.TextureLoader().load( "face.png" );
-
+    
     var geometry = new THREE.SphereGeometry(10);
-    var material = new THREE.MeshBasicMaterial({map: texture});
+    var material = new THREE.MeshBasicMaterial({color: 0xff0000});
     var sphere = new THREE.Mesh(geometry, material);
+
+    //cube.add( new THREEFIELD.Collider( cube ) );
+    //gyroscope
 
     sphere.position.x = -30;
     sphere.position.y = 2;
@@ -120,3 +122,18 @@ function loadEnvironment4() {
     scene.add( sphere );
 }
 
+// ball texture
+function loadEnviroment5() {
+    
+    var geometry   = new THREE.SphereGeometry(0.5, 32, 32)
+    var material  = new THREE.MeshPhongMaterial()
+    var earthMesh = new THREE.Mesh(geometry, material)
+
+    earthMesh.position.x = -30;
+    earthMesh.position.y = 2;
+    earthMesh.position.z = 0;
+
+    material.map    = THREE.ImageUtils.loadTexture('face.png')
+
+    scene.add(earthMesh)
+}
