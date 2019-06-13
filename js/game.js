@@ -114,9 +114,9 @@ function loadEnvironment4() {
     //cube.add( new THREEFIELD.Collider( cube ) );
     //gyroscope
 
-    cube.position.x = -30;
-    cube.position.y = 2;
-    cube.position.z = -30;
+    sphere.position.x = -30;
+    sphere.position.y = 2;
+    sphere.position.z = -30;
 
     scene.add( sphere );
 }
