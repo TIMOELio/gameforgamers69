@@ -10,6 +10,7 @@ function loadGame() {
     loadEnvironment1();
     loadEnvironment2();
     loadEnvironment3();
+    loadEnvironment4();
     // load the player
     initMainPlayer();
 
@@ -102,5 +103,21 @@ function loadEnvironment3() {
     cube.position.z = 30;
 
     scene.add( cube );
+}
+
+// bleron ball
+function loadEnvironment4() {
+    var geometry = new THREE.SphereGeometry(10,5);
+    var material = new THREE.MeshBasicMaterial({color: 0xff0000});
+    var sphere = new THREE.Mesh(geometry, material);
+
+    //cube.add( new THREEFIELD.Collider( cube ) );
+    //gyroscope
+
+    cube.position.x = -30;
+    cube.position.y = 2;
+    cube.position.z = -30;
+
+    scene.add( sphere );
 }
 
