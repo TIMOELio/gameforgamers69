@@ -107,7 +107,7 @@ function loadEnvironment3() {
 
 // bleron ball
 function loadEnvironment4() {
-    var geometry = new THREE.SphereGeometry(10,5);
+    var geometry = new THREE.SphereGeometry(10);
     var material = new THREE.MeshBasicMaterial({color: 0xff0000});
     var sphere = new THREE.Mesh(geometry, material);
 
