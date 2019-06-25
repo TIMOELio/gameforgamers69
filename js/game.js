@@ -143,11 +143,10 @@ function loadEnvironment5() {
 
 function loadEnvironment6() {
     
+  var texture = new THREE.TextureLoader().load( 'https://threejsfundamentals.org/threejs/resources/images/wall.jpg' );
+    
   var geometry = new THREE.BoxGeometry(5, 5, 5);
-  var loader = new THREE.TextureLoader();
-  var material = new THREE.MeshBasicMaterial({
-    map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg'),
-  });
+  var material = new THREE.MeshBasicMaterial( { map: texture } );
   var cube = new THREE.Mesh(geometry, material);
     
   
