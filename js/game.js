@@ -12,6 +12,7 @@ function loadGame() {
     loadEnvironment3();
     loadEnvironment4();
     loadEnvironment5();
+    loadEnvironment6();
     // load the player
     initMainPlayer();
 
@@ -140,7 +141,7 @@ function loadEnvironment5() {
     scene.add( earthMesh )
 }
 
-function loadEnvironment5() {
+function loadEnvironment6() {
     
     
 const boxWidth = 1;
