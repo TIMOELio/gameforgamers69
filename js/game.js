@@ -139,3 +139,22 @@ function loadEnvironment5() {
 
     scene.add( earthMesh )
 }
+
+function loadEnvironment5() {
+    
+    
+const boxWidth = 1;
+  const boxHeight = 1;
+  const boxDepth = 1;
+  const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+
+  const cubes = [];  // just an array we can use to rotate the cubes
+  const loader = new THREE.TextureLoader();
+
+  const material = new THREE.MeshBasicMaterial({
+    map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg'),
+  });
+  const cube = new THREE.Mesh(geometry, material);
+  scene.add(cube);
+    
+}
